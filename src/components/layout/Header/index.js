@@ -7,7 +7,9 @@ import { Header, Ul, Li, LogoImg } from './Header.styles'
 const AppHeader = ({ appLinks }) => {
   return (
     <Header>
-    <LogoImg src={logo} />
+      <Link to='/'>
+        <LogoImg src={logo} />
+      </Link>
     <Ul>
       {appLinks.map((link, i) => <Li key={i}>
         <Link to={link.link}>{ link.title }</Link>

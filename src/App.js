@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
+import EnterBazaar from './pages/EnterBazaar'
+import EngageCircles from './pages/EngageCircles'
 import AppHeader from './components/layout/Header'
 import AppDrawer from './components/layout/Drawer'
-import Home from './pages/Home'
-import About from './pages/About'
-import NotFound from './pages/NotFound'
+import ExploreCircles from './pages/ExploreCircles'
+
 import 'antd/dist/antd.css'
 import './assets/css/style.css'
 
@@ -14,7 +18,7 @@ function App() {
   const appLinks = [
     { link: '/explore-circles', title: 'Explore Circles' },
     { link: '/enter-bazaar', title: 'Enter Bazaar' },
-    { link: '/engage-circle', title: 'Engage Circle' }
+    { link: '/engage-circles', title: 'Engage Circle' }
   ]
   const toggleDrawer = () => {
     setToggle(!toggle)
@@ -33,7 +37,9 @@ function App() {
       </label>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
+        <Route path='/explore-circles' element={<ExploreCircles />} />
+        <Route path='/engage-circles' element={<EngageCircles />} />
+        <Route path='/enter-bazaar' element={<EnterBazaar />} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
     </Router>
