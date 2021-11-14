@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Button } from 'antd'
 
 export const Header = styled.header`
   height: 60px;
@@ -15,12 +14,27 @@ export const Header = styled.header`
 
 `
 
-
 export const LogoImg = styled.img`
   width: 150px;
+  display: flex;
+  justify-self: center;
 
   @media screen and (max-width: 767px) {
-    width: 100px;
+    ${({isToggle}) => {
+      if (isToggle) {
+        return {
+          width: '40%',
+        
+          marginBottom: '30px',
+          marginRight: 'auto',
+          marginLeft: 'auto'
+        }
+      }
+      return {
+        width: '100px'
+      }
+    }
+    // width: 100px;
   }
 `
 
@@ -30,28 +44,18 @@ export const Ul = styled.ul`
   display: inline;
   
   @media screen and (max-width: 767px) {
-    display: none;    
-  }
+    display: ${({isToggle}) => isToggle ? 'block' : 'none'};
+  
 `
 
 export const Li = styled.li`
-  display: inline;
-  margin: 0 26px;
+  display: ${({isToggle}) => isToggle ? 'block' : 'inline'};
+  margin: ${({isToggle}) => isToggle ? '20px 26px' : '0 26px'};
   color: black;
+  text-align: center;
   
   a {
     color: black;
-  }
-`
-
-export const ConnectButton = styled(Button)`
-  border-radius: 24px;
-  background: var(--brand-color);
-  border: 1px solid var(--brand-color);
-  font-weight: bolder;
-  
-   @media screen and (max-width: 767px) {
-    display: none;    
   }
 `
 

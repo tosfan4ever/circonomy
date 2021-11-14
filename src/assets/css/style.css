@@ -1,21 +1,23 @@
 :root {
   --brand-color: #FECE4E;
-
 }
 
 body {
   background: #cbc9c9;
-
 }
 
-label{
+.menu-icon{
   display:flex;
   flex-direction:column;
   width:30px;
   cursor:pointer;
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  z-index: 99999;
 }
 
-label span{
+.menu-icon span{
   background: grey;
   border-radius:10px;
   height:3px;
@@ -53,4 +55,11 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
   transform-origin:bottom;
   width:55%;
   transform: translate(11px,-6px) rotatez(45deg);
+}
+
+
+@media(min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
 }

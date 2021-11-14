@@ -1,32 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
-import logo from '../../../assets/img/logo.png';
+import logo from '../../../assets/img/logo.png'
+import ConnectButton from '../../../components/ConnectButton'
+import { Header, Ul, Li, LogoImg } from './Header.styles'
 
-import { Header, Ul, Li, LogoImg, ConnectButton } from './Header.styles';
-
-const AppHeader = () => (
-  <Header>
+const AppHeader = ({ appLinks }) => {
+  return (
+    <Header>
     <LogoImg src={logo} />
     <Ul>
-      <Li>
-        <Link to="/">Explore Circles</Link>
-      </Li>
-      <Li>
-        <Link to="/about">Enter Bazaar</Link>
-      </Li>
-      <Li>
-        <Link to="/about">Engage Circle</Link>
-      </Li>
+      {appLinks.map((link, i) => <Li key={i}>
+        <Link to={link.link}>{ link.title }</Link>
+      </Li>)}
     </Ul>
     <ConnectButton>Connect</ConnectButton>
-    <label htmlFor="check">
-      <input type="checkbox" id="check"/>
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
   </Header>
-);
+)};
 
 export default AppHeader;
