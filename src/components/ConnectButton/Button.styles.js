@@ -12,7 +12,7 @@ export const Button = styled.button`
     ${({isToggle}) => {
         if (isToggle) {
           return {
-            width: '40%',
+            width: '65%',
             marginRight: 'auto',
             marginLeft: 'auto',
             display: 'inline'

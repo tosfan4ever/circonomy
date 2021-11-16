@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import {toggleDrawer} from './redux/toggleDrawer'
 
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
@@ -12,17 +15,19 @@ import ExploreCircles from './pages/ExploreCircles'
 import 'antd/dist/antd.css'
 import './assets/css/style.css'
 
-function App() {
 
-  const [toggle, setToggle] = useState(false)
+function App() {
+  const { toggle } = useSelector(state => state.toggle)
+  const dispatch = useDispatch()
+  // const [toggle, setToggle] = useState(false)
   const appLinks = [
     { link: '/explore-circles', title: 'Explore Circles' },
     { link: '/enter-bazaar', title: 'Enter Bazaar' },
     { link: '/engage-circles', title: 'Engage Circle' }
   ]
-  const toggleDrawer = () => {
-    setToggle(!toggle)
-  }
+  // const toggleDrawer = () => {
+  //   setToggle(!toggle)
+  // }
 
   return (
 
@@ -30,7 +35,7 @@ function App() {
       <AppHeader appLinks={appLinks}/>
       <AppDrawer appLinks={appLinks} isToggle={toggle}/>
       <label className="menu-icon" htmlFor="check">
-        <input onClick={toggleDrawer} type="checkbox" id="check"/>
+        <input onClick={() => dispatch(toggleDrawer())} type="checkbox" id="check"/>
         <span></span>
         <span></span>
         <span></span>

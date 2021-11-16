@@ -3,7 +3,7 @@ import { Button } from './Button.styles'
 
 const ConnectButton = ({ isToggle }) => (
   <Button isToggle={isToggle }>
-    Connect
+    Become a Circonomist
   </Button>
 )
 
