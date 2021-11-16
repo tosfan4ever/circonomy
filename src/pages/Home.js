@@ -1,7 +1,9 @@
-import { useEffect }  from 'react'
-import { useLocation } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import {toggleDrawer} from '../redux/toggleDrawer'
+import {useLocation} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import {toggleDrawer} from "../redux/toggleDrawer";
+
+import hero from '../assets/img/hero-bkg.svg'
 
 const Home = () => {
   let location = useLocation()
@@ -9,11 +11,15 @@ const Home = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(toggleDrawer())
+    if (toggle) {
+      dispatch(toggleDrawer())
+    }
   }, [location])
 
   return (
-    <div>Home</div>
+    <div>
+      <img style={{width: '100%'}} src={hero} alt=""/>
+    </div>
   )
 }
 

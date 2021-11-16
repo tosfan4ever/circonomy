@@ -9,7 +9,9 @@ const ExploreCircles = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(toggleDrawer())
+    if (toggle) {
+      dispatch(toggleDrawer())
+    }
   }, [location])
 
   return (
