@@ -12,7 +12,7 @@ const EngageCircles = () => {
     if (toggle) {
       dispatch(toggleDrawer())
     }
-  }, [location, dispatch, toggle])
+  }, [location, dispatch])
 
   return (
     <div>Engage Circles</div>
