@@ -14,7 +14,7 @@ const Home = () => {
     if (toggle) {
       dispatch(toggleDrawer())
     }
-  }, [location])
+  }, [location, dispatch, toggle])
 
   return (
     <>
