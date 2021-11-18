@@ -12,7 +12,7 @@ const ExploreCircles = () => {
     if (toggle) {
       dispatch(toggleDrawer())
     }
-  }, [location, dispatch])
+  }, [location])
 
   return (
     <div>Explore Circles</div>
