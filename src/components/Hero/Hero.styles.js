@@ -18,6 +18,7 @@ export const Content = styled.div`
 
 export const Heading = styled.h1`
   font-size: 4em;
+  font-family: 'Revalia', cursive;
   grid-column: 1 / 5;
   color: #fefefe;
 `
