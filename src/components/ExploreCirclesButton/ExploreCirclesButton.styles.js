@@ -2,8 +2,9 @@ import styled from 'styled-components'
 
 export const ExploreCirclesButton = styled.button`
   border-radius: 24px;
-  padding: 4px 20px;
-  font-weight: bolder;
+  padding: 14px 20px;
+  font-weight: 900;
+  color: #444;
   background: var(--brand-color);
   border: 1px solid var(--brand-color);
   

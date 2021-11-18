@@ -50,3 +50,17 @@ export const Text = styled.p`
     grid-column: 1 / -1;
   }
 `
+
+export const HeroBtn = styled.div`
+  grid-column: 1 / 5;
+  display: grid;
+  grid-template-columns: 30% 30%;
+  grid-gap: 24px;
+  color: #fefefe;
+  
+    @media (max-width: 767px) {
+    font-size: 1.1em;
+    grid-column: 1 / -1;
+     grid-template-columns: 45% 45%;
+  }
+`
