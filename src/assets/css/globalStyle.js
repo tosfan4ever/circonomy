@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Revalia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@100&family=Revalia&display=swap');
  
 :root {
   --brand-color: #FECE4E;
