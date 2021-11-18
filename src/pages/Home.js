@@ -5,8 +5,6 @@ import { toggleDrawer } from '../redux/toggleDrawer'
 
 import Hero from '../components/Hero'
 
-import hero from '../assets/img/hero-bkg.svg'
-
 const Home = () => {
   let location = useLocation()
   const { toggle } = useSelector(state => state.toggle)

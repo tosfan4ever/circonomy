@@ -12,7 +12,7 @@ const EnterBazaar = () => {
     if (toggle) {
       dispatch(toggleDrawer())
     }
-  }, [location])
+  }, [location, dispatch, toggle])
 
   return (
     <div>Enter Bazaar</div>
