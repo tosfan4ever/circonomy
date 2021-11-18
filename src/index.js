@@ -4,11 +4,13 @@ import 'antd/dist/antd.css'
 import App from './App'
 import store from './redux/store'
 import { Provider } from 'react-redux'
+import GlobalStyle from './assets/css/globalStyle'
 import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <StrictMode>
     <Provider store={store}>
+      <GlobalStyle />
       <App />
     </Provider>
   </StrictMode>,

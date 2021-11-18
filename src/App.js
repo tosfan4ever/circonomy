@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { ThemeProvider } from 'styled-components'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import {toggleDrawer} from './redux/toggleDrawer'
@@ -14,6 +15,7 @@ import ExploreCircles from './pages/ExploreCircles'
 
 import 'antd/dist/antd.css'
 import './assets/css/style.css'
+
 
 
 function App() {
@@ -32,23 +34,25 @@ function App() {
   return (
 
     <Router>
-      <AppHeader appLinks={appLinks}/>
-      <AppDrawer appLinks={appLinks} isToggle={toggle}/>
-      <label className="menu-icon" htmlFor="check">
-        <input onClick={() => dispatch(toggleDrawer())} type="checkbox" id="check"/>
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/explore-circles' element={<ExploreCircles />} />
-        <Route path='/engage-circles' element={<EngageCircles />} />
-        <Route path='/enter-bazaar' element={<EnterBazaar />} />
-        <Route path='/*' element={<NotFound />} />
-      </Routes>
+      {/*<ThemeProvider>*/}
+        <AppHeader appLinks={appLinks}/>
+        <AppDrawer appLinks={appLinks} isToggle={toggle}/>
+        <label className="menu-icon" htmlFor="check">
+          <input onClick={() => dispatch(toggleDrawer())} type="checkbox" id="check"/>
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/explore-circles' element={<ExploreCircles/>}/>
+          <Route path='/engage-circles' element={<EngageCircles/>}/>
+          <Route path='/enter-bazaar' element={<EnterBazaar/>}/>
+          <Route path='/*' element={<NotFound/>}/>
+        </Routes>
+      {/*</ThemeProvider>*/}
     </Router>
-  );
+  )
 }
 
 export default App

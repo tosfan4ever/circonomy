@@ -1,13 +1,14 @@
+import { createGlobalStyle } from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Revalia&display=swap');
+ 
 :root {
   --brand-color: #FECE4E;
 }
 
 *{
   box-sizing: border-box;
-}
-
-body {
-  background: #cbc9c9;
 }
 
 .menu-icon{
@@ -67,3 +68,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
     display: none;
   }
 }
+
+`
+
+export  default GlobalStyle
