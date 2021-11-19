@@ -33,7 +33,7 @@ export const Heading = styled.h1`
   color: #fefefe;
   
    @media (max-width: 767px) {
-    font-size: 1.7em;
+    font-size: 2.2em;
     grid-column: 1 / -1;
     margin-top: 40px;
   }
@@ -61,6 +61,6 @@ export const HeroBtn = styled.div`
     @media (max-width: 767px) {
     font-size: 1.1em;
     grid-column: 1 / -1;
-     grid-template-columns: 45% 45%;
+    grid-template-columns: 45% 45%;
   }
 `
