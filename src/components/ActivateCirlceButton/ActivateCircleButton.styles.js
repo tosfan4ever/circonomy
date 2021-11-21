@@ -9,7 +9,7 @@ export const ActivateCircleButton = styled.button`
   border: 1px solid #444;
   
   @media (max-width: 767px) {
-    padding: 2px 10px;
+    padding: 4px 10px;
   }
 `
 

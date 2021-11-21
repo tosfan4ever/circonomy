@@ -15,7 +15,7 @@ const AppHeader = ({ appLinks }) => {
         <Link to={link.link}>{ link.title }</Link>
       </Li>)}
     </Ul>
-    <ConnectButton>Become a Circonomist</ConnectButton>
+      <Link to='/sign-up'><ConnectButton>Become a Circonomist</ConnectButton></Link>
   </Header>
 )};
 

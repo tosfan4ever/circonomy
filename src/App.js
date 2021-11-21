@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import {toggleDrawer} from './redux/toggleDrawer'
 
 import Home from './pages/Home'
+import SignUp from './pages/SignUp'
 import NotFound from './pages/NotFound'
 import EnterBazaar from './pages/EnterBazaar'
 import EngageCircles from './pages/EngageCircles'
@@ -40,6 +41,7 @@ function App() {
         <Route path='/explore-circles' element={<ExploreCircles/>}/>
         <Route path='/engage-circles' element={<EngageCircles/>}/>
         <Route path='/enter-bazaar' element={<EnterBazaar/>}/>
+        <Route path='/sign-up' element={<SignUp/>}/>
         <Route path='/*' element={<NotFound/>}/>
       </Routes>
     </Router>

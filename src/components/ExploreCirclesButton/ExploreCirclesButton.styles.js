@@ -9,7 +9,7 @@ export const ExploreCirclesButton = styled.button`
   border: 1px solid var(--brand-color);
   
   @media (max-width: 767px) {
-    padding: 2px 10px;
+    padding: 4px 10px;
   }
 `
 
