@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   background: url(${img}) center no-repeat;
   background-size: contain;
   height: 100vh;
-  
   @media (max-width: 767px) {
    
   }
@@ -14,7 +13,6 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
   width: 60%;
-  height: 300px;
   border-radius: 5px;
   border: 1px solid grey;
   position: fixed;
@@ -38,14 +36,17 @@ export const WelcomeBack = styled.div`
   }
 `
 
-export const Register = styled.div`
-  
+export const SignUpWrapper = styled.div`
+  background: #fefefe;
+  padding: 0 50px 50px 50px;
   @media (max-width: 767px) {
    
   }
 `
 
 export const Heading = styled.h1`
+  font-family: 'Revalia', cursive;
+  font-weight: 900;
   margin: 40px 0;
   @media (max-width: 767px) {
    
@@ -54,8 +55,23 @@ export const Heading = styled.h1`
 
 export const Text = styled.p`
   margin: 40px 0;
-  font-size: 2rem;
+  font-size: 1.4rem;
   @media (max-width: 767px) {
    
   }
+`
+
+export const Button = styled.button`
+  border-radius: 24px;
+  background: var(--brand-color);
+  border: ${({border}) => '1px solid '+border};
+  padding: 4px 20px;
+  margin-top: 30px;
+  font-weight: bolder;
+ 
+  
+   @media screen and (max-width: 767px) {
+
+}    
+
 `
