@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   background: url(${img}) center no-repeat;
   background-size: contain;
   height: 600px;
+  
   @media (max-width: 767px) {
    
   }
@@ -21,13 +22,10 @@ export const Content = styled.div`
   transform: translate(-50%, -50%);
   text-align: center;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 60% 40%;
   
   @media (max-width: 767px) {
-    width: 80%;
-    position: relative;
-    margin-top: 100px;
-    grid-template-columns: 100%;
+   
   }
 `
 
@@ -39,14 +37,11 @@ export const WelcomeBack = styled.div`
   }
 `
 
-export const SignUpWrapper = styled.div`
+export const MagicLinkWrapper = styled.div`
   background: #fefefe;
   padding: 0 50px 50px 50px;
-  
   @media (max-width: 767px) {
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px;
+   
   }
 `
 
@@ -77,7 +72,7 @@ export const Button = styled.button`
  
   
    @media screen and (max-width: 767px) {
-    margin: 40px 0 40px 0;
-  }    
+
+}    
 
 `

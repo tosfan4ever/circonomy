@@ -21,8 +21,8 @@ const SignUp = () => {
     <Content>
       <WelcomeBack>
         <Heading>Welcome back!</Heading>
-        <Text>To keep connected with us <br/> please enter your email!</Text>
-        <Button border="#fefefe" onClick={submitForm}>Login In</Button>
+        <Text>To keep connected with us please enter your email!</Text>
+        <Button border="#fefefe" onClick={submitForm}>Login</Button>
       </WelcomeBack>
       <SignUpWrapper>
         <Heading>Create Account!</Heading>
@@ -30,7 +30,7 @@ const SignUp = () => {
         <Input style={{marginBottom: '3px'}} placeholder='First Name' />
         <Input style={{marginBottom: '3px'}} placeholder='Last Name' />
         <Input style={{marginBottom: '3px'}} type='email' placeholder='Email Address'/>
-        <Button border="yellow" onClick={submitForm}>Sign Up</Button>
+        <Button border="#FECE4E" onClick={submitForm}>Sign Up</Button>
       </SignUpWrapper>
     </Content>
   </Wrapper>

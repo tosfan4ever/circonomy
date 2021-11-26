@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import {toggleDrawer} from './redux/toggleDrawer'
+import { toggleDrawer } from './redux/toggleDrawer'
 
 import Home from './pages/Home'
 import SignUp from './pages/SignUp'
 import NotFound from './pages/NotFound'
+import MagicLink from './pages/MagicLink'
 import EnterBazaar from './pages/EnterBazaar'
 import EngageCircles from './pages/EngageCircles'
 import AppHeader from './components/layout/Header'
@@ -42,6 +43,7 @@ function App() {
         <Route path='/engage-circles' element={<EngageCircles/>}/>
         <Route path='/enter-bazaar' element={<EnterBazaar/>}/>
         <Route path='/sign-up' element={<SignUp/>}/>
+        <Route path='/magic-link' element={<MagicLink/>}/>
         <Route path='/*' element={<NotFound/>}/>
       </Routes>
     </Router>
