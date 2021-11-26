@@ -1,4 +1,6 @@
 import { Input } from 'antd'
+import { notification } from '../../redux/magicLink'
+import { useDispatch } from 'react-redux'
 
 import {
   Wrapper,
@@ -10,10 +12,9 @@ import {
   Button
 } from './MagicLink.styles'
 
+
 const SignUp = () => {
-  const submitForm = () => {
-    // alert('here')
-  }
+  const dispatch = useDispatch()
 
 
   return (
@@ -23,12 +24,12 @@ const SignUp = () => {
         <Heading>Sign in to Circonomy</Heading>
         <Text>Get a magic link to sign in instantly! No <br/> need for a password at all!</Text>
         <Input style={{marginBottom: '3px'}} placeholder='Email Address' />
-        <Button border="#FECE4E" onClick={submitForm}>Send Magic Link!</Button>
+        <Button border="#FECE4E" onClick={() => dispatch(notification())}>Send Magic Link!</Button>
       </MagicLinkWrapper>
       <WelcomeBack>
         <Heading>Hi Friends!</Heading>
         <Text>Enter your personal details and <br/> start your recycle journey with us!</Text>
-        <Button style={{marginTop: '70px'}} border="#333" onClick={submitForm}>Sign Up</Button>
+        <Button style={{marginTop: '70px'}} border="#333">Sign Up</Button>
       </WelcomeBack>
     </Content>
   </Wrapper>
