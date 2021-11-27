@@ -1,7 +1,10 @@
 import { Input } from 'antd'
+import mailSent from '../../assets/img/mail_sent.svg'
 
 import {
   Wrapper,
+  Content,
+  Image,
   Heading,
   Text,
   Button
@@ -14,12 +17,22 @@ const SignUp = () => {
 
 
   return (
-  <Wrapper>
-    <Heading>Magic Link Sent</Heading>
-    <Text>Get a magic link to sign in instantly! No <br/> need for a password at all!</Text>
-    <Input style={{marginBottom: '3px'}} placeholder='Email Address' />
-    <Button border="#FECE4E" >Send Magic Link!</Button>
-  </Wrapper>
-)}
+    <Wrapper>
+      <Content>
+        <Image src={mailSent}/>
+        <Heading>Magic Link Sent</Heading>
+        <Text>
+          We have sent an email to john@doe.com with a single use magic link.
+        </Text>
+        <Text>
+          Please check your inbox and spam/bulk folder and click the link in the email to continue.
+        </Text>
+        <Text>Did not get the email?</Text>
+        <Button border="#FECE4E">Send Magic Link!</Button>
+        <small>The magic link will be expired in 120 seconds</small>
+      </Content>
+    </Wrapper>
+  )
+}
 
 export default SignUp
