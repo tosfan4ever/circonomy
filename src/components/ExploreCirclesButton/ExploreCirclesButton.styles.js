@@ -7,6 +7,7 @@ export const ExploreCirclesButton = styled.button`
   color: #444;
   background: var(--brand-color);
   border: 1px solid var(--brand-color);
+  cursor: pointer;
   
   @media (max-width: 767px) {
     padding: 4px 10px;

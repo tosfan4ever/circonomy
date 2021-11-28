@@ -18,9 +18,7 @@ const Home = () => {
 
   return (
     <>
-      <Hero>
-        {/*<img style={{width: '100%'}} src={hero} alt=""/>*/}
-      </Hero>
+      <Hero></Hero>
     </>
   )
 }

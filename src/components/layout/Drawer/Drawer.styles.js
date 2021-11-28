@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 99999;
   transition: 0.4s all;
   display: ${({isToggle}) => (isToggle ? 'flex' : 'none')};
   flex-direction: ${({isToggle}) => (isToggle ? 'column' : '')};

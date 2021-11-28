@@ -19,7 +19,6 @@ const SignUp = () => {
   return (
     <>
       <Register>
-        {/*<img style={{width: '100%'}} src={hero} alt=""/>*/}
       </Register>
     </>
   )

@@ -7,6 +7,7 @@ export const ActivateCircleButton = styled.button`
   background: #fefefe;
   color: #444;
   border: 1px solid #444;
+  cursor: pointer;
   
   @media (max-width: 767px) {
     padding: 4px 10px;

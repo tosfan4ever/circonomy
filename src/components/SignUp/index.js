@@ -1,4 +1,5 @@
 import { Input } from 'antd'
+import { useNavigate } from 'react-router-dom'
 
 import {
   Wrapper,
@@ -11,10 +12,13 @@ import {
 } from './SignUp.styles'
 
 const SignUp = () => {
-  const submitForm = () => {
-    // alert('here')
+  const navigate = useNavigate()
+  const login = () => {
+    navigate('/magic-link')
   }
-
+  const signUp = () => {
+    navigate('/sign-up')
+  }
 
   return (
   <Wrapper>
@@ -22,7 +26,7 @@ const SignUp = () => {
       <WelcomeBack>
         <Heading>Welcome back!</Heading>
         <Text>To keep connected with us please enter your email!</Text>
-        <Button border="#fefefe" onClick={submitForm}>Login</Button>
+        <Button border="#fefefe" onClick={login}>Login</Button>
       </WelcomeBack>
       <SignUpWrapper>
         <Heading>Create Account!</Heading>
@@ -30,7 +34,7 @@ const SignUp = () => {
         <Input style={{marginBottom: '3px'}} placeholder='First Name' />
         <Input style={{marginBottom: '3px'}} placeholder='Last Name' />
         <Input style={{marginBottom: '3px'}} type='email' placeholder='Email Address'/>
-        <Button border="#FECE4E" onClick={submitForm}>Sign Up</Button>
+        <Button border="#FECE4E" onClick={signUp}>Sign Up</Button>
       </SignUpWrapper>
     </Content>
   </Wrapper>

@@ -6,6 +6,7 @@ export const Button = styled.button`
   border: 1px solid var(--brand-color);
   padding: 4px 20px;
   font-weight: bolder;
+  cursor: pointer;
   
    @media screen and (max-width: 767px) {
    
