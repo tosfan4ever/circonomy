@@ -16,7 +16,7 @@ export const Content = styled.div`
   width: 35%;
   background: #fefefe;
   border-radius: 4px;
-  border: 1px solid #bbbaba;
+  border: 1px solid var(--app-border);
   padding: 30px;
   margin: 30px auto 30px auto;
   

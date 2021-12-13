@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
  
 :root {
   --brand-color: #FECE4E;
+  --app-border: #bbbaba;
 }
 
 *{
@@ -30,15 +31,15 @@ const GlobalStyle = createGlobalStyle`
   transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
 }
-span:nth-of-type(1){
+.Menu:nth-of-type(1){
   width:50%;
 }
 
-span:nth-of-type(2){
+.Menu:nth-of-type(2){
   width: 100%;
 }
 
-span:nth-of-type(3){
+.Menu:nth-of-type(3){
   width: 75%;
 }
 

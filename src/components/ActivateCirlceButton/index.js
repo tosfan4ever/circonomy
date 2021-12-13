@@ -1,7 +1,16 @@
 import { ActivateCircleButton } from './ActivateCircleButton.styles'
+import { useNavigate } from 'react-router-dom'
 
-const ActivateCircleBtn = () => (
-  <ActivateCircleButton>Activate Circle</ActivateCircleButton>
-)
+const ActivateCircleBtn = () => {
+  const navigate = useNavigate()
+
+  function goToRegister() {
+    navigate('/sign-up')
+  }
+
+  return (
+    <ActivateCircleButton onClick={goToRegister}>Activate Circle</ActivateCircleButton>
+  )
+}
 
 export default ActivateCircleBtn
