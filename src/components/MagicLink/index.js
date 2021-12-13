@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Input } from 'antd'
-import { notification } from '../../redux/magicLink'
-import { useDispatch } from 'react-redux'
+// import { notification } from '../../redux/magicLink'
+// import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 import { loginUser } from '../../services/magic';
@@ -22,7 +22,7 @@ const SignUp = () => {
   const [loading, setLoading] = useState('');
   const [error, setError] = useState(null);
 
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
   const navigate = useNavigate()
 
   const signUp = () => {
@@ -42,12 +42,14 @@ const SignUp = () => {
       return;
     }
     try {
+      console.log(loading)
       await loginUser(email);
       setLoading(false);
       localStorage.setItem('email', email)
       navigate('/onboarding');
-    } catch (error) {
+    } catch (err) {
       setError('Unable to log in');
+      console.error(err);
       console.error(error);
     }
   };

@@ -1,10 +1,10 @@
 import { useLocation } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import {useContext, useEffect} from 'react'
+import { useEffect} from 'react'
 import { toggleDrawer } from '../redux/toggleDrawer'
 
 import Onboarding1 from '../components/Onboarding1'
-import {Button, Wrapper} from "../components/Onboarding1/Onboarding1.styles";
+import {Button} from "../components/Onboarding1/Onboarding1.styles";
 import {UserContext} from "../context/userContext";
 
 const Onboarding = () => {
