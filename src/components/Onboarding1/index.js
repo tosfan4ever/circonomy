@@ -11,7 +11,7 @@ import {
 } from './Onboarding1.styles'
 
 
-const SignUp = () => {
+const Onboarding1 = () => {
   const [amount, setAmount] = useState(0)
 
   const  getValue = e => {
@@ -25,10 +25,10 @@ const SignUp = () => {
         <Heading>How much would you like to recycle?</Heading>
         <Radio.Group onChange={getValue} value={amount}>
           <Space direction="vertical">
-            <Radio value={100}><Input placeholder="100"/></Radio>
-            <Radio value={200}><Input placeholder="200"/></Radio>
-            <Radio value={300}><Input placeholder="300"/></Radio>
-            <Radio value={400}><Input placeholder="400"/></Radio>
+            <Radio value={100}><Input placeholder="Increase 10%"/></Radio>
+            <Radio value={200}><Input placeholder="Increase 20%"/></Radio>
+            <Radio value={300}><Input placeholder="Increase 30%"/></Radio>
+            <Radio value={400}><Input placeholder="Other (Please enter the amount)"/></Radio>
           </Space>
         </Radio.Group>
       </Form>
@@ -37,4 +37,4 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+export default Onboarding1

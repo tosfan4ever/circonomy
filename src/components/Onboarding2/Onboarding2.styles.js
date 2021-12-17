@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   
   @media (max-width: 767px) {
-
+ 
     padding: 40px 20px;
     grid-template-columns: 1fr;
   }
