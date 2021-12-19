@@ -9,17 +9,15 @@ export const Wrapper = styled.div`
   
   @media (max-width: 767px) {
  
-    padding: 40px 20px;
+    padding: 0;
     grid-template-columns: 1fr;
   }
 `
 
 export const Form = styled.div`
-  //display: grid;
-  //grid-template-columns: 60% 40%;
   
   @media (max-width: 767px) {
-  
+    margin-bottom: 20px;
   }
 `
 

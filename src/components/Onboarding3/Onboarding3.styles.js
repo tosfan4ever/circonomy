@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   
   @media (max-width: 767px) {
-    padding: 40px 20px;
+    padding: 0;
     grid-template-columns: 1fr;
   }
 `
@@ -17,7 +17,7 @@ export const Form = styled.div`
  
   
   @media (max-width: 767px) {
-  
+    margin-bottom: 20px;
   }
 `
 

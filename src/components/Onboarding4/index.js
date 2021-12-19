@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 import { Input } from 'antd'
 
+
 import {
   Wrapper,
   Form,
@@ -15,9 +16,9 @@ const Onboarding4 = () => {
     <Wrapper>
       <Form>
         <Heading>Setup your community profile [optional]</Heading>
-        <Input placeholder="Username" />
-        <Input placeholder="Full name" />
-        <Input placeholder="Address" />
+        <Input style={{marginBottom: '10px'}} placeholder="Username" />
+        <Input style={{marginBottom: '10px'}} placeholder="Full name" />
+        <Input style={{marginBottom: '10px'}} placeholder="Address" />
       </Form>
     </Wrapper>
   )

@@ -17,7 +17,7 @@ const Onboarding5 = () => {
       <Form>
         <Heading>Setup your community profile [optional]</Heading>
         <Upload>
-          <Button style={{ width: '309px' }} icon={<UploadOutlined />}>Click to Upload</Button>
+          <Button style={{ width: '309px', marginBottom: '10px' }} icon={<UploadOutlined />}>Click to Upload</Button>
         </Upload>
         <Input.TextArea placeholder="Username" />
       </Form>
