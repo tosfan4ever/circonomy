@@ -25,9 +25,9 @@ const Onboarding3 = () => {
         <Heading>What role do you want to play?</Heading>
         <Radio.Group onChange={getValue} value={amount}>
           <Space direction="vertical">
-            <Radio value={100}><Input placeholder="Participant/Member"/></Radio>
-            <Radio value={200}><Input placeholder="Ringleader"/></Radio>
-            <Radio value={300}><Input placeholder="Both"/></Radio>
+            <Radio value={100}><Input readOnly={true} placeholder="Participant/Member"/></Radio>
+            <Radio value={200}><Input readOnly={true} placeholder="Ringleader"/></Radio>
+            <Radio value={300}><Input readOnly={true} placeholder="Both"/></Radio>
           </Space>
         </Radio.Group>
       </Form>

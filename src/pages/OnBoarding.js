@@ -9,6 +9,8 @@ import Onboarding2 from '../components/Onboarding2'
 import Onboarding3 from '../components/Onboarding3'
 import Onboarding4 from '../components/Onboarding4'
 import Onboarding5 from '../components/Onboarding5'
+import Onboarding6 from '../components/Onboarding6'
+import Onboarding7 from '../components/Onboarding7'
 
 import { Wrapper, Buttons, Button, BackButton } from '../components/Onboarding/Onboarding.styles'
 import {UserContext} from '../context/userContext'
@@ -71,6 +73,12 @@ const Onboarding = () => {
           { current === 4 && (
             <Onboarding5 />
           )}
+          { current === 5 && (
+            <Onboarding6 />
+          )}
+          { current === 6 && (
+            <Onboarding7 />
+          )}
 
           <Buttons style={x}>
             { current > 0 && (
@@ -78,12 +86,12 @@ const Onboarding = () => {
                 Back
               </BackButton>
             )}
-            { current < 4 && (
+            { current < 6 && (
               <Button border="#FECE4E" onClick={() => next()}>
                 Next
               </Button>
             )}
-            { current === 4 && (
+            { current === 6 && (
               <Button border="#FECE4E" onClick={() => message.success('Processing complete!')}>
                 Finish
               </Button>

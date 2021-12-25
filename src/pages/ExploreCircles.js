@@ -1,7 +1,7 @@
-import {useLocation} from "react-router-dom";
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {toggleDrawer} from "../redux/toggleDrawer";
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { toggleDrawer } from '../redux/toggleDrawer'
 
 const ExploreCircles = () => {
   let location = useLocation()

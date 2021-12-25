@@ -25,10 +25,10 @@ const Onboarding1 = () => {
         <Heading>How much would you like to recycle?</Heading>
         <Radio.Group onChange={getValue} value={amount}>
           <Space direction="vertical">
-            <Radio value={100}><Input placeholder="Increase 10%"/></Radio>
-            <Radio value={200}><Input placeholder="Increase 20%"/></Radio>
-            <Radio value={300}><Input placeholder="Increase 30%"/></Radio>
-            <Radio value={400}><Input placeholder="Other (Please enter the amount)"/></Radio>
+            <Radio value={100}><Input readOnly={true} placeholder="Increase 10%"/></Radio>
+            <Radio value={200}><Input readOnly={true} placeholder="Increase 20%"/></Radio>
+            <Radio value={300}><Input readOnly={true} placeholder="Increase 30%"/></Radio>
+            <Radio value={400}><Input readOnly={true} placeholder="Other (Please enter the amount)"/></Radio>
           </Space>
         </Radio.Group>
       </Form>

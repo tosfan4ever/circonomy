@@ -25,10 +25,10 @@ const Onboarding2 = () => {
         <Heading>How much would you like to improve?</Heading>
         <Radio.Group onChange={getValue} value={amount}>
           <Space direction="vertical">
-            <Radio value={100}><Input placeholder="100"/></Radio>
-            <Radio value={200}><Input placeholder="200"/></Radio>
-            <Radio value={300}><Input placeholder="300"/></Radio>
-            <Radio value={400}><Input placeholder="400"/></Radio>
+            <Radio value={100}><Input readOnly={true} placeholder="100"/></Radio>
+            <Radio value={200}><Input readOnly={true} placeholder="200"/></Radio>
+            <Radio value={300}><Input readOnly={true} placeholder="300"/></Radio>
+            <Radio value={400}><Input readOnly={true} placeholder="400"/></Radio>
           </Space>
         </Radio.Group>
       </Form>

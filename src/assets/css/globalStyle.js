@@ -5,11 +5,16 @@ const GlobalStyle = createGlobalStyle`
  
 :root {
   --brand-color: #FECE4E;
+  --brand-sec-color: #20B7EB;
   --app-border: #bbbaba;
 }
 
 *{
   box-sizing: border-box;
+}
+
+.ant-input:hover {
+  border-color: transparent;
 }
 
 .menu-icon{
