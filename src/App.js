@@ -57,14 +57,15 @@ function App() {
     console.log('loading')
   }
 
-  const getUser = () => {
-    if (localStorage.hasOwnProperty('email')) {
-      return localStorage.getItem('email')
-    }
+  function getUser (email) {
+    setUser({email, isLoggedIn: true})
+    // if (localStorage.hasOwnProperty('email')) {
+    //   return localStorage.getItem('email')
+    // }
   }
 
   return (
-    <UserContext.Provider value={getUser()}>
+    <UserContext.Provider value={{user, getUser}}>
       <Router>
         <Fragment><AppHeader appLinks={appLinks}/>
           <AppDrawer appLinks={appLinks} isToggle={toggle}/>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useContext, useState} from 'react';
 import { Input } from 'antd'
 // import { notification } from '../../redux/magicLink'
 // import { useDispatch } from 'react-redux'
@@ -15,9 +15,11 @@ import {
   Text,
   Button
 } from './MagicLink.styles'
+import {UserContext} from "../../context/userContext";
 
 
 const SignUp = () => {
+  const { getUser } = useContext(UserContext);
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState('');
   const [error, setError] = useState(null);
@@ -44,6 +46,7 @@ const SignUp = () => {
     try {
       console.log(loading)
       await loginUser(email);
+      getUser(email)
       setLoading(false);
       localStorage.setItem('email', email)
       navigate('/onboarding');

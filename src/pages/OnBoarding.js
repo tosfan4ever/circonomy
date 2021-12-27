@@ -1,8 +1,9 @@
-import { useState, useEffect} from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { message } from 'antd'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleDrawer } from '../redux/toggleDrawer'
+import {UserContext} from '../context/userContext'
 
 import Onboarding1 from '../components/Onboarding1'
 import Onboarding2 from '../components/Onboarding2'
@@ -10,14 +11,15 @@ import Onboarding3 from '../components/Onboarding3'
 import Onboarding4 from '../components/Onboarding4'
 import Onboarding5 from '../components/Onboarding5'
 import Onboarding6 from '../components/Onboarding6'
-import Onboarding7 from '../components/Onboarding7'
 
+import Onboarding7 from '../components/Onboarding7'
 import { Wrapper, Buttons, Button, BackButton } from '../components/Onboarding/Onboarding.styles'
-import {UserContext} from '../context/userContext'
 
 const Onboarding = () => {
-  // const { email } = useContext(UserContext);
-  let location = useLocation()
+
+  const navigate = useNavigate()
+  const { user } = useContext(UserContext)
+  const location = useLocation()
   const { toggle } = useSelector(state => state.toggle)
   const dispatch = useDispatch()
 
@@ -47,6 +49,10 @@ const Onboarding = () => {
   }
 
   useEffect(() => {
+    if (!user.email) {
+      message.error('Login to start a Circle')
+      navigate('/sign-up')
+    }
     if (toggle) {
       dispatch(toggleDrawer())
     }
@@ -54,9 +60,9 @@ const Onboarding = () => {
 
   return (
 
-    <UserContext.Consumer>
-
-      {value =>
+    // <UserContext.Consumer>
+    //
+    //   {value =>
         <Wrapper>
           { current === 0 && (
             <Onboarding1 />
@@ -99,9 +105,9 @@ const Onboarding = () => {
 
           </Buttons>
         </Wrapper>
-      }
-
-    </UserContext.Consumer>
+    //   }
+    //
+    // </UserContext.Consumer>
   )
 }
 
