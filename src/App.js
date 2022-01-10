@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -67,7 +67,7 @@ function App() {
   return (
     <UserContext.Provider value={{user, getUser}}>
       <Router>
-        <Fragment><AppHeader appLinks={appLinks}/>
+        <AppHeader appLinks={appLinks}/>
           <AppDrawer appLinks={appLinks} isToggle={toggle}/>
           <label className="menu-icon" htmlFor="check">
             <input onClick={() => dispatch(toggleDrawer())} type="checkbox" id="check"/>
@@ -86,7 +86,7 @@ function App() {
             <Route path='/onboarding' element={<OnBoarding/>}/>
             {/*<PrivateRoute path="/dashboard" element={Dashboard}/>*/}
             <Route path='/*' element={<NotFound/>}/>
-          </Routes></Fragment>
+          </Routes>
       </Router>
     </UserContext.Provider>
   )

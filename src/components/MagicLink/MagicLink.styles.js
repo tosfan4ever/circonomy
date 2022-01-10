@@ -76,6 +76,7 @@ export const Button = styled.button`
   margin-top: 30px;
   font-weight: bolder;
   cursor: pointer;
+  min-width: 150px;
  
   
    @media screen and (max-width: 767px) {

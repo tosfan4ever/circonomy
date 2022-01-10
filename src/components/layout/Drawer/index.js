@@ -9,11 +9,11 @@ import { Wrapper } from './Drawer.styles'
 const AppDrawer = ({ isToggle, appLinks }) => (
   <Wrapper isToggle={isToggle}>
     <Link to='/'>
-      <LogoImg src={logo} isToggle={isToggle} />
+      <LogoImg src={logo} isToggle={isToggle}/>
     </Link>
     <Ul isToggle={isToggle}>
       {appLinks.map((link, i) => <Li isToggle={isToggle} key={i}>
-        <Link to={link.link}>{ link.title }</Link>
+        <Link to={link.link}>{link.title}</Link>
       </Li>)}
     </Ul>
     <ConnectButton isToggle={isToggle} />

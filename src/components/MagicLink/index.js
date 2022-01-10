@@ -1,10 +1,11 @@
-import React, {useContext, useState} from 'react';
-import { Input } from 'antd'
+import React, { useContext, useState } from 'react'
+import { Input, Spin } from 'antd'
+import { LoadingOutlined } from '@ant-design/icons'
 // import { notification } from '../../redux/magicLink'
 // import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-
-import { loginUser } from '../../services/magic';
+import { UserContext } from '../../context/userContext'
+import { loginUser } from '../../services/magic'
 
 import {
   Wrapper,
@@ -15,14 +16,15 @@ import {
   Text,
   Button
 } from './MagicLink.styles'
-import {UserContext} from "../../context/userContext";
 
 
 const SignUp = () => {
-  const { getUser } = useContext(UserContext);
-  const [email, setEmail] = useState('');
-  const [loading, setLoading] = useState('');
-  const [error, setError] = useState(null);
+
+  const antIcon = <LoadingOutlined style={{ fontSize: 20, color: '#333' }} spin />
+  const { getUser } = useContext(UserContext)
+  const [email, setEmail] = useState('')
+  const [loading, setLoading] = useState('')
+  const [error, setError] = useState(null)
 
   // const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -36,24 +38,26 @@ const SignUp = () => {
   }
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    setLoading(true);
+    event.preventDefault()
+    setLoading(true)
+
     if (!email) {
-      setLoading(false);
-      setError('Email is Invalid');
-      return;
+      setLoading(false)
+      setError('Email is Invalid')
+      return
     }
     try {
-      console.log(loading)
-      await loginUser(email);
+
+      await loginUser(email)
       getUser(email)
-      setLoading(false);
+      setLoading(false)
       localStorage.setItem('email', email)
-      navigate('/onboarding');
+      navigate('/onboarding')
     } catch (err) {
-      setError('Unable to log in');
-      console.error(err);
-      console.error(error);
+      setError('Unable to log in')
+      setLoading(false)
+      console.error(err)
+      console.error(error)
     }
   };
 
@@ -64,7 +68,7 @@ const SignUp = () => {
           <Heading>Sign in to Circonomy</Heading>
           <Text>Get a magic link to sign in instantly! No <br/> need for a password at all!</Text>
           <Input onChange={ handleChange } style={{marginBottom: '3px'}} placeholder='Email Address' />
-          <Button border="#FECE4E" onClick={handleSubmit}>Send Magic Link!</Button>
+          <Button border="#FECE4E" onClick={handleSubmit}>{ loading ? <Spin indicator={antIcon} /> : 'Send Magic Link!'}</Button>
           {/*<Button border="#FECE4E" onClick={() => dispatch(notification())}>Send Magic Link!</Button>*/}
         </MagicLinkWrapper>
         <WelcomeBack>
@@ -78,3 +82,9 @@ const SignUp = () => {
 }
 
 export default SignUp
+
+// Obi Nwere Ego - Greater than Obi Cubana
+//
+// Different sets of people identify with me with different name.
+//
+//   To my guys back in the days of FGC Ph, I was known by Cejo

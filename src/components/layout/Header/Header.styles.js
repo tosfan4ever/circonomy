@@ -14,6 +14,20 @@ export const Header = styled.header`
 
 `
 
+export const Links = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  
+   @media screen and (max-width: 767px) {
+    display: ${({isToggle}) => isToggle ? 'block' : 'none'
+  };
+`
+
 export const LogoImg = styled.img`
   width: 150px;
   display: flex;

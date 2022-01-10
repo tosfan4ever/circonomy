@@ -10,7 +10,7 @@ const ConnectButton = ({ isToggle }) => {
 
   return (
     <Button onClick={goToRegister} isToggle={isToggle }>
-      Become a Circonomist
+      Circonomist Entryway
     </Button>
   )
 }
