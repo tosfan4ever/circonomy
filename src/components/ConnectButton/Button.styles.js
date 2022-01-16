@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Button = styled.button`
+  line-height: 1;
   border-radius: 24px;
   background: var(--brand-color);
   border: 1px solid var(--brand-color);

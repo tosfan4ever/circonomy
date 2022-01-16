@@ -14,4 +14,11 @@ export const Wrapper = styled.div`
 
 `
 
+export const Icons = styled.div`
+  margin: 22px 0;
+  display: flex;
+  justify-content: center;
+  
+`
+
 
