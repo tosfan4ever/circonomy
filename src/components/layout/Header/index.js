@@ -11,7 +11,7 @@ const AppHeader = ({ appLinks }) => {
     <Header>
       <Links>
         <Link to='/'>
-          <LogoImg src={logo} alt="circonomy image"/>
+          <LogoImg src={logo} alt="circonomy"/>
         </Link>
         <Ul>
           {appLinks.map((link, i) => <Li key={i}>
@@ -20,8 +20,8 @@ const AppHeader = ({ appLinks }) => {
         </Ul>
       </Links>
       <Icons>
-        <img src={notification} style={{ margin: '0 5px'}} alt="circonomy image"/>
-        <img src={wallet} style={{ margin: '0 5px'}} alt="circonomy image"/>
+        <img src={notification} style={{ margin: '0 5px'}} alt="circonomy"/>
+        <img src={wallet} style={{ margin: '0 5px'}} alt="circonomy"/>
         <ConnectButton />
       </Icons>
   </Header>
