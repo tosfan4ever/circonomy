@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Input, Spin } from 'antd'
+import { Input, Spin, message } from 'antd'
 import { LoadingOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
 
@@ -35,10 +35,18 @@ const SignUp = () => {
         email: email
       })
       .then((response) => {
-        setLoading(false)
+        reset()
+        message.success('Successfully registered')
         console.log(response)
         // setPost(response.data);
       });
+  }
+
+  const reset = () => {
+    setLoading(false)
+    setFirstName('')
+    setLastName('')
+    setEmail('')
   }
 
   const getFirstName = e => {
