@@ -39,7 +39,6 @@ function App() {
 
   const [user, setUser] = useState({ isLoggedIn: null, email: '' })
   const [loading, setLoading] = useState()
-  const [post, setPost] = useState(null)
 
   useEffect(() => {
     const validateUser = async () => {
@@ -53,9 +52,6 @@ function App() {
     };
     validateUser();
 
-    axios.get(`http://localhost:8000/api/test`).then((response) => {
-      setPost(response);
-    });
   }, [user.isLoggedIn]);
 
   if (loading) {
@@ -67,16 +63,6 @@ function App() {
     setUser({email, isLoggedIn: true})
   }
 
-  function createPost() {
-    axios
-      .post('http://localhost:8000/api/test', {
-        title: "Hello World!",
-        body: "This is a new post."
-      })
-      .then((response) => {
-        setPost(response.data);
-      });
-  }
 
   return (
     <UserContext.Provider value={{user, getUser}}>
