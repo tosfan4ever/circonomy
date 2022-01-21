@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import { UserContext } from './context/userContext';
-import { checkUser } from './services/magic';
+import { UserContext } from './context/userContext'
+import { checkUser } from './services/magic'
 
 import { toggleDrawer } from './redux/toggleDrawer'
 
@@ -36,8 +37,9 @@ function App() {
     { link: '/engage-circles', title: 'Engage Circle' }
   ]
 
-  const [user, setUser] = useState({ isLoggedIn: null, email: '' });
-  const [loading, setLoading] = useState();
+  const [user, setUser] = useState({ isLoggedIn: null, email: '' })
+  const [loading, setLoading] = useState()
+  const [post, setPost] = useState(null)
 
   useEffect(() => {
     const validateUser = async () => {
@@ -50,6 +52,10 @@ function App() {
       }
     };
     validateUser();
+
+    axios.get(`http://localhost:8000/api/test`).then((response) => {
+      setPost(response);
+    });
   }, [user.isLoggedIn]);
 
   if (loading) {
@@ -59,9 +65,17 @@ function App() {
 
   function getUser (email) {
     setUser({email, isLoggedIn: true})
-    // if (localStorage.hasOwnProperty('email')) {
-    //   return localStorage.getItem('email')
-    // }
+  }
+
+  function createPost() {
+    axios
+      .post('http://localhost:8000/api/test', {
+        title: "Hello World!",
+        body: "This is a new post."
+      })
+      .then((response) => {
+        setPost(response.data);
+      });
   }
 
   return (
