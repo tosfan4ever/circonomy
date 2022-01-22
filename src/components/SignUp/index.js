@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Input, Spin, message } from 'antd'
 import { LoadingOutlined } from '@ant-design/icons'
 import { useNavigate } from 'react-router-dom'
+import API from '../../services/api'
 
 import {
   Wrapper,
@@ -12,7 +13,6 @@ import {
   Text,
   Button
 } from './SignUp.styles'
-import axios from "axios";
 
 
 const SignUp = () => {
@@ -28,8 +28,8 @@ const SignUp = () => {
   }
   const signUp = () => {
     setLoading(true)
-    axios
-      .post('http://localhost:8000/api/auth/register', {
+    API
+      .post('auth/register', {
         first_name: firstName,
         last_name: lastName,
         email: email
