@@ -37,8 +37,7 @@ const SignUp = () => {
       .then((response) => {
         reset()
         message.success('Successfully registered')
-        console.log(response)
-        // setPost(response.data);
+        console.log(response.data)
       });
   }
 
