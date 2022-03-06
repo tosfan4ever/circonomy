@@ -1,13 +1,11 @@
 import { useState } from 'react'
-import { Input, Select, Button } from 'antd'
+import { Input, Select } from 'antd'
 
 import {Wrapper} from './CircleFilter.styles'
 
 const { Option } = Select
 
 const CircleFilter = () => {
-
-  const [ringLeader, setRingLeader] = useState(true)
 
   const handleChange = () => {
 

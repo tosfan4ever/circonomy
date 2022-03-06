@@ -44,22 +44,22 @@ const ExploreCircles = () => {
     }
   ]);
 
-  const handleClick = () => {
-    setMarkers([
-      {
-        position: { lng: -110.673447, lat: 40.5225581 },
-        text: "Voodoo Doughnut"
-      },
-      {
-        position: { lng: -110.6781446, lat: 40.5225512 },
-        text: "Bailey's Taproom"
-      },
-      {
-        position: { lng: -110.67535700000002, lat: 40.5192743 },
-        text: "Barista"
-      }
-    ]);
-  };
+  // const handleClick = () => {
+  //   setMarkers([
+  //     {
+  //       position: { lng: -110.673447, lat: 40.5225581 },
+  //       text: "Voodoo Doughnut"
+  //     },
+  //     {
+  //       position: { lng: -110.6781446, lat: 40.5225512 },
+  //       text: "Bailey's Taproom"
+  //     },
+  //     {
+  //       position: { lng: -110.67535700000002, lat: 40.5192743 },
+  //       text: "Barista"
+  //     }
+  //   ]);
+  // };
 
   return (
     <Wrapper>

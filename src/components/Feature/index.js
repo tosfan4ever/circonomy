@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import {Button} from 'antd'
 
 import allCircles from '../../assets/img/all-circle.png'
 import fundingCircles from '../../assets/img/funding-circle.png'
@@ -10,12 +8,6 @@ import {Wrapper} from './Feature.styles'
 
 
 const Feature = () => {
-
-  const [ringLeader, setRingLeader] = useState(true)
-
-  const handleChange = () => {
-
-  }
 
   return (
     <Wrapper>
