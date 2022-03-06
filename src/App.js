@@ -7,17 +7,18 @@ import { checkUser } from './services/magic'
 
 import { toggleDrawer } from './redux/toggleDrawer'
 
+import Test from './pages/Test'
 import Home from './pages/Home'
 import SignUp from './pages/SignUp'
 import NotFound from './pages/NotFound'
 import MagicLink from './pages/MagicLink'
-import EnterBazaar from './pages/EnterBazaar'
+import OnBoarding from './pages/OnBoarding'
 import EngageCircles from './pages/EngageCircles'
 import AppHeader from './components/layout/Header'
 import AppDrawer from './components/layout/Drawer'
 import ActivateCircle from './pages/ActivateCircle'
 import ExploreCircles from './pages/ExploreCircles'
-import OnBoarding from './pages/OnBoarding'
+import EnterCircommerce from './pages/EnterCircommerce'
 
 // import PrivateRoute from './components/PrivateRoute';
 
@@ -32,8 +33,8 @@ function App() {
   const dispatch = useDispatch()
   const appLinks = [
     { link: '/explore-circles', title: 'Explore Circles' },
-    { link: '/enter-bazaar', title: 'Enter Bazaar' },
-    { link: '/engage-circles', title: 'Engage Circle' }
+    { link: '/enter-circommerce', title: 'Enter Circommerce' },
+    { link: '/engage-circonomy', title: 'Engage Circonomy' }
   ]
 
   const [user, setUser] = useState({ isLoggedIn: null, email: '' })
@@ -77,12 +78,13 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/explore-circles' element={<ExploreCircles/>}/>
-            <Route path='/engage-circles' element={<EngageCircles/>}/>
-            <Route path='/enter-bazaar' element={<EnterBazaar/>}/>
+            <Route path='/engage-circonomy' element={<EngageCircles/>}/>
+            <Route path='/enter-circommerce' element={<EnterCircommerce/>}/>
             <Route path='/sign-up' element={<SignUp/>}/>
             <Route path='/magic-link' element={<MagicLink/>}/>
             <Route path='/activate-circle' element={<ActivateCircle/>}/>
             <Route path='/onboarding' element={<OnBoarding/>}/>
+            <Route path='/test' element={<Test/>}/>
             {/*<PrivateRoute path="/dashboard" element={Dashboard}/>*/}
             <Route path='/*' element={<NotFound/>}/>
           </Routes>

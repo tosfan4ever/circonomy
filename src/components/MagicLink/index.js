@@ -1,11 +1,10 @@
 import React, { useContext, useState } from 'react'
 import { Input, Spin } from 'antd'
 import { LoadingOutlined } from '@ant-design/icons'
-// import { notification } from '../../redux/magicLink'
-// import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../../context/userContext'
 import { loginUser } from '../../services/magic'
+import Axios from '../../services/api'
 
 import {
   Wrapper,
@@ -51,7 +50,7 @@ const SignUp = () => {
       await loginUser(email)
       getUser(email)
       setLoading(false)
-      localStorage.setItem('email', email)
+      saveEmail(email)
       navigate('/onboarding')
     } catch (err) {
       setError('Unable to log in')
@@ -59,7 +58,14 @@ const SignUp = () => {
       console.error(err)
       console.error(error)
     }
-  };
+  }
+
+  async function saveEmail(email) {
+    const res = await Axios.post('auth/register', { email })
+    console.log(res)
+  }
+
+
 
   return (
     <Wrapper>

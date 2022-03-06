@@ -9,8 +9,29 @@ const GlobalStyle = createGlobalStyle`
   --app-border: #bbbaba;
 }
 
+.sec {
+  color: var(--brand-sec-color);
+}
+
+.txt-center {
+  text-align: center;
+}
+
 *{
   box-sizing: border-box;
+}
+
+.apart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bold9 {
+  font-weight: 900;
+}
+
+.bold7 {
+  font-weight: 700;
 }
 
 .ant-input:hover {

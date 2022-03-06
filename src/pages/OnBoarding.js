@@ -13,7 +13,7 @@ import Onboarding5 from '../components/Onboarding5'
 import Onboarding6 from '../components/Onboarding6'
 
 import Onboarding7 from '../components/Onboarding7'
-import { Wrapper, Buttons, Button, BackButton } from '../components/Onboarding/Onboarding.styles'
+import { Wrapper, Buttons, Button, BackButton } from '../components/PagesStyles/Onboarding.styles'
 
 const Onboarding = () => {
 
