@@ -5,11 +5,11 @@ import img from '../../assets/img/hero-bkg.svg'
 export const HeroWrapper = styled.div`
   background: url(${img}) center no-repeat;
   background-size: cover;
-  height: 700px; 
+  height: 900px; 
   margin-top: -5px;
   
   @media (max-width: 767px) {
-    height: 478px;
+    height: 600px;
   }
 `
 

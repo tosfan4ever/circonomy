@@ -4,6 +4,8 @@ import { useEffect } from 'react'
 import { toggleDrawer } from '../redux/toggleDrawer'
 
 import Hero from '../components/Hero'
+import Intro from '../components/Intro'
+import AboutCirconomy from '../components/AboutCirconomy'
 
 const Home = () => {
   let location = useLocation()
@@ -18,7 +20,9 @@ const Home = () => {
 
   return (
     <>
-      <Hero></Hero>
+      <Hero />
+      <Intro />
+      <AboutCirconomy />
     </>
   )
 }
